@@ -26,20 +26,6 @@
 
             </View>
 
-            <TextView
-                android:id="@+id/rank_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="1"
-                android:textColor="@color/green"
-                android:textSize="48dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
-            </TextView>
 
             <TextView
                 android:id="@+id/name_tv"
@@ -51,7 +37,7 @@
                 android:text="Bitcoin"
                 android:textColor="@color/dark"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@+id/rank_tv"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="InvalidId">
 
@@ -67,11 +53,13 @@
                 android:text="BTC"
                 android:textColor="@color/dark"
                 android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="@+id/rank_tv"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/name_tv">
 
 
             </TextView>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

@@ -8,4 +8,7 @@ interface RetrofitServices {
 
     @GET("coins")
     fun getCoinList(): Call<List<CoinModel>>
+
+
+
 }

@@ -1,10 +1,8 @@
 package com.skreep.coin
 
-import android.graphics.ColorSpace
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.skreep.coin.Interface.RetrofitServices
 import com.skreep.coin.adapter.MainAdapter
 import com.skreep.coin.common.Common
@@ -32,12 +30,13 @@ class MainActivity : AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         binding.rv.layoutManager = layoutManager
 
-        getAllMovieList()
+        getCoinList()
+
 
     }
 
 
-    private fun getAllMovieList() {
+    private fun getCoinList() {
         mService.getCoinList().enqueue(object : Callback<List<CoinModel>> {
             override fun onResponse(
                 call: Call<List<CoinModel>>,
@@ -55,4 +54,5 @@ class MainActivity : AppCompatActivity() {
 
         })
     }
+
 }

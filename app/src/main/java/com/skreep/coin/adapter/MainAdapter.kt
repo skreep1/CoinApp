@@ -22,7 +22,10 @@ class MainAdapter(private val context: Context, private val movieList: MutableLi
 
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
         val listCoin = movieList[position]
-        holder.binding.name.text = listCoin.name
+        holder.binding.nameTv.text = listCoin.name
+        holder.binding.symbolTv.text = listCoin.symbol
+        holder.binding.rankTv.text = listCoin.rank
+
     }
 
     override fun getItemCount(): Int {

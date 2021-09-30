@@ -10,5 +10,8 @@ data class CoinModel(
     @SerializedName("symbol")
     var symbol: String,
 
+    @SerializedName("rank")
+    var rank: String
+
     )
 

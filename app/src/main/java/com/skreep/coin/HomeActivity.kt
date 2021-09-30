@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.skreep.coin.Interface.RetrofitServices
-import com.skreep.coin.adapter.MainAdapter
+import com.skreep.coin.adapter.HomeAdapter
 import com.skreep.coin.common.Common
 import com.skreep.coin.databinding.ActivityMainBinding
 import com.skreep.coin.model.CoinModel
@@ -12,11 +12,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     lateinit var mService: RetrofitServices
     lateinit var layoutManager: LinearLayoutManager
-    lateinit var adapter: MainAdapter
+    lateinit var adapter: HomeAdapter
     lateinit var binding: ActivityMainBinding
 
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 call: Call<List<CoinModel>>,
                 response: Response<List<CoinModel>>
             ) {
-                adapter = MainAdapter(baseContext, response.body() as MutableList<CoinModel>)
+                adapter = HomeAdapter(baseContext, response.body() as MutableList<CoinModel>)
                 adapter.notifyDataSetChanged()
                 binding.rv.adapter = adapter
             }
